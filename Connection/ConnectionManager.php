@@ -2,7 +2,6 @@
 
 namespace Dedipanel\PHPSeclibWrapperBundle\Connection;
 
-use Symfony\Component\DependencyInjection\ContainerAware;
 use Dedipanel\PHPSeclibWrapperBundle\Connection\ConnectionManagerInterface;
 use Psr\Log\LoggerInterface;
 use Dedipanel\PHPSeclibWrapperBundle\Server\ServerInterface;
@@ -14,7 +13,7 @@ use Dedipanel\PHPSeclibWrapperBundle\Connection\Connection;
  * @license http://opensource.org/licenses/MIT
  * @version 1.0
  */
-class ConnectionManager extends ContainerAware implements ConnectionManagerInterface
+class ConnectionManager implements ConnectionManagerInterface
 {
     protected $connections;
     protected $logger;
