@@ -18,7 +18,7 @@ class DedipanelPHPSeclibWrapperBundle extends Bundle
         set_error_handler(array($this, 'errorHandler'), E_USER_NOTICE | E_USER_ERROR | E_USER_WARNING);
     }
 
-    public static function errorHandler($errno, $errstr, $errfile, $errline, $errcontext)
+    public static function errorHandler($errno, $errstr, $errfile, $errline, $errcontext = [])
     {
         if ($errno == E_USER_NOTICE
         && (strpos($errstr, 'Error 110. Connection timed out') !== false
